@@ -57,7 +57,7 @@ const getNoteByIdHandler = (request, h) => {
 
   if (note !== undefined) {
     return {
-      status: "succes",
+      status: "success",
       data: {
         note,
       },
@@ -65,8 +65,8 @@ const getNoteByIdHandler = (request, h) => {
   }
 
   const response = h.response({
-    status: fail,
-    message: "catatan tidak ditemukan",
+    status: "fail",
+    message: "Catatan tidak ditemukan",
   });
   response.code(404);
   return response;
@@ -121,7 +121,7 @@ const deleteNoteByIdHandler = (request, h) => {
   }
 
   const response = h.response({
-    status: "Fail",
+    status: "fail",
     message: "Catatan gagal dihapus, Id tidak ditemukan",
   });
   response.code(404);
